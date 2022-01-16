@@ -33,11 +33,11 @@ for item in bazaar["products"]:
     current_data = {}
     current_data["time"] = bazaar["lastUpdated"]
     try:
-        current_data["sellPrice"] = bazaar["products"][item]["buy_summary"][0]["pricePerUnit"]
+        current_data["sellPrice"] = bazaar["products"][item]["sell_summary"][0]["pricePerUnit"]
     except:
         current_data["sellPrice"] = 0
     try:
-        current_data["buyPrice"] = bazaar["products"][item]["sell_summary"][0]["pricePerUnit"]
+        current_data["buyPrice"] = bazaar["products"][item]["buy_summary"][0]["pricePerUnit"]
     except:
         current_data["buyPrice"] = 0
     item_data["history"].append(current_data)
